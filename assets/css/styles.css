@@ -117,6 +117,12 @@ a {
   letter-spacing: 0;
 }
 
+.icon-link img {
+  width: 17px;
+  height: 17px;
+  display: block;
+}
+
 .phone-pill {
   padding: 0 20px;
   background: var(--black);
