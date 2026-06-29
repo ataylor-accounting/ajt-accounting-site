@@ -109,17 +109,20 @@ a {
 }
 
 .icon-link {
-  width: 34px;
+  min-width: 40px;
+  padding: 0 10px;
   background: var(--lime);
   color: var(--black);
-  font-size: 0.82rem;
+  font-size: 0.78rem;
+  letter-spacing: 0;
 }
 
 .phone-pill {
-  padding: 0 18px;
+  padding: 0 20px;
   background: var(--black);
   color: var(--lime);
   font-size: 0.8rem;
+  letter-spacing: 0;
 }
 
 .section {
