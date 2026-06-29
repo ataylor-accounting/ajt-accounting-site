@@ -41,11 +41,41 @@
           <aside class="review-card" aria-label="Google review highlight">
             <p>Providing accurate bookkeeping, stress-free tax preparation, and dependable payroll services for businesses and individuals.</p>
             <img src="assets/img/google-reviews.jpg" alt="Google 5.0 review rating">
-            <div class="review-person">
-              <img src="assets/img/unnamed.png" alt="">
-              <div>
-                <strong>Dawn DeMario</strong>
-                <span>Very professional and knowledgeable. Made it easy for us to navigate our taxes. Friendly and personable.</span>
+            <div class="review-carousel" data-review-carousel aria-label="Client reviews">
+              <div class="review-track">
+                <article class="review-slide is-active">
+                  <img src="assets/img/unnamed.png" alt="">
+                  <div><strong>Dawn DeMario</strong><span>Very professional and knowledgeable. Made it easy for us to navigate our taxes. Friendly and personable. Avery answered all of our questions. We will use him again.</span></div>
+                </article>
+                <article class="review-slide">
+                  <img src="assets/img/unnamed-1.png" alt="">
+                  <div><strong>Leeann Carmack</strong><span>Actually cares about his clients. Reasonably priced. Very easy to communicate with and responds fast!</span></div>
+                </article>
+                <article class="review-slide">
+                  <img src="assets/img/unnamed-2.png" alt="">
+                  <div><strong>Jeanna Piech</strong><span>He did a great job with me and my husband’s taxes. They were done fast and right. We will definitely be using him again.</span></div>
+                </article>
+                <article class="review-slide">
+                  <img src="assets/img/unnamed-3.png" alt="">
+                  <div><strong>Randy C</strong><span>Very knowledgeable, professional, and very thorough. He made the entire process easy, stress-free, and explained everything clearly.</span></div>
+                </article>
+                <article class="review-slide">
+                  <img src="assets/img/unnamed-4.png" alt="">
+                  <div><strong>Rafael</strong><span>Very professional and direct with communication. My experience getting my taxes done was very easy and quick.</span></div>
+                </article>
+                <article class="review-slide">
+                  <img src="assets/img/unnamed-5.png" alt="">
+                  <div><strong>Tony Ortiz</strong><span>Avery was great to work with, very thorough and professional. Worked around my busy work schedule.</span></div>
+                </article>
+                <article class="review-slide">
+                  <img src="assets/img/unnamed-6.png" alt="">
+                  <div><strong>Eliasha Howell-Sundeen</strong><span>Avery was so patient with me. He was so kind and made the whole process easy. I will be coming back every year.</span></div>
+                </article>
+              </div>
+              <div class="review-controls" aria-label="Review carousel controls">
+                <button type="button" data-review-prev aria-label="Previous review">‹</button>
+                <div class="review-dots" aria-hidden="true"></div>
+                <button type="button" data-review-next aria-label="Next review">›</button>
               </div>
             </div>
           </aside>
@@ -74,11 +104,16 @@
           </figure>
         </div>
         <div class="wrap badge-strip" aria-label="Certifications and accounting platforms">
-          <img src="assets/img/quick.webp" alt="QuickBooks certified badge">
-          <img src="assets/img/l1.png" alt="Intuit bookkeeping badge">
-          <img src="assets/img/l2.png" alt="Intuit advisor badge">
-          <img src="assets/img/Picture456ytg-1-1.webp" alt="CPA badge">
-          <img src="assets/img/quick.webp" alt="QuickBooks certified badge">
+          <div class="badge-track">
+            <img src="assets/img/quick.webp" alt="QuickBooks certified badge">
+            <img src="assets/img/l1.png" alt="Intuit bookkeeping badge">
+            <img src="assets/img/l2.png" alt="Intuit advisor badge">
+            <img src="assets/img/Picture456ytg-1-1.webp" alt="CPA badge">
+            <img src="assets/img/quick.webp" alt="QuickBooks certified badge">
+            <img src="assets/img/l1.png" alt="Intuit bookkeeping badge">
+            <img src="assets/img/l2.png" alt="Intuit advisor badge">
+            <img src="assets/img/Picture456ytg-1-1.webp" alt="CPA badge">
+          </div>
         </div>
       </section>
 
@@ -156,7 +191,7 @@
       <section class="section">
         <div class="wrap contact-layout">
           <div class="contact-spacer"><span>AJT Accounting</span></div>
-          <form class="lead-form" action="mailto:ataylor@ajt-accounting.com" method="post" enctype="text/plain">
+          <form class="lead-form" action="mailto:ataylor@ajt-accounting.com" method="post" enctype="text/plain" data-email-form>
             <p class="kicker">Let's Connect</p>
             <h2>Schedule A Free 30-Minute Consultation</h2>
             <p>Got questions about bookkeeping, taxes, payroll, or financial cleanup? Book a free 30-minute consultation to discuss your needs and next steps.</p>
@@ -171,7 +206,7 @@
             <label><span>Briefly describe your accounting needs</span><textarea name="message" rows="5"></textarea></label>
             <label class="checkbox"><input type="checkbox" name="privacy"> <span>I agree to the privacy policy</span></label>
             <button class="button lime" type="submit">Schedule Free Consultation</button>
-            <small>Confirmation will be sent to your email</small>
+            <small data-form-status>Submitting opens an email addressed to AJT Accounting.</small>
           </form>
         </div>
       </section>

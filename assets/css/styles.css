@@ -259,31 +259,88 @@ h3 {
   object-fit: contain;
 }
 
-.review-person {
+.review-carousel {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.review-track {
   display: grid;
+}
+
+.review-slide {
+  display: none;
   grid-template-columns: 42px 1fr;
   gap: 12px;
   padding: 20px;
-  border-radius: 12px;
   background: #f2f2ef;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-.review-person img {
+.review-slide.is-active {
+  display: grid;
+  animation: reviewIn 260ms ease-out;
+}
+
+.review-slide img {
   width: 42px;
   height: 42px;
   border-radius: 50%;
 }
 
-.review-person strong,
-.review-person span {
+.review-slide strong,
+.review-slide span {
   display: block;
 }
 
-.review-person span {
+.review-slide span {
   margin-top: 8px;
   color: var(--ink);
   font-size: 0.92rem;
+}
+
+.review-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 2px 0;
+}
+
+.review-controls button {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--black);
+  color: var(--lime);
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.review-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.review-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #c8cbc4;
+}
+
+.review-dot.is-active {
+  width: 22px;
+  background: var(--black);
+}
+
+@keyframes reviewIn {
+  from { opacity: 0; transform: translateX(16px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 .feature-mosaic {
@@ -383,18 +440,39 @@ h3 {
 }
 
 .badge-strip {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 34px;
   margin-top: 34px;
   overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
 
-.badge-strip img {
+.badge-track {
+  display: flex;
+  align-items: center;
+  gap: clamp(40px, 8vw, 110px);
+  width: max-content;
+  animation: badgeDrift 22s linear infinite;
+}
+
+.badge-strip:hover .badge-track {
+  animation-play-state: paused;
+}
+
+.badge-track img {
   max-height: 92px;
   width: auto;
   object-fit: contain;
+}
+
+@keyframes badgeDrift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge-track {
+    animation: none;
+  }
 }
 
 .band,
@@ -702,6 +780,10 @@ h3 {
   font-weight: 700;
 }
 
+.lead-form small.error {
+  color: #ffb7b7;
+}
+
 .quick-question {
   padding: 56px;
   border-radius: 12px;
@@ -851,15 +933,8 @@ h3 {
     min-height: 280px;
   }
 
-  .badge-strip {
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding-bottom: 10px;
-  }
-
-  .badge-strip img {
+  .badge-track img {
     max-height: 80px;
-    flex: 0 0 auto;
   }
 
   .form-grid {
