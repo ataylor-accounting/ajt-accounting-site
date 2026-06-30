@@ -30,6 +30,48 @@ if (reviewCarousel) {
   window.setInterval(() => showReview(current + 1), 5000);
 }
 
+document.querySelectorAll("[data-tabs]").forEach((tabs) => {
+  const buttons = [...tabs.querySelectorAll("[data-tab-button]")];
+  const panels = [...tabs.querySelectorAll("[data-tab-panel]")];
+  if (!buttons.length || !panels.length) return;
+
+  const activateTab = (button, shouldFocus = false) => {
+    const panelId = button.getAttribute("aria-controls");
+    buttons.forEach((item) => {
+      const isActive = item === button;
+      item.classList.toggle("is-active", isActive);
+      item.setAttribute("aria-selected", String(isActive));
+      item.tabIndex = isActive ? 0 : -1;
+    });
+
+    panels.forEach((panel) => {
+      const isActive = panel.id === panelId;
+      panel.classList.toggle("is-active", isActive);
+      panel.hidden = !isActive;
+    });
+
+    if (shouldFocus) button.focus();
+  };
+
+  buttons.forEach((button, index) => {
+    button.addEventListener("click", () => activateTab(button));
+    button.addEventListener("keydown", (event) => {
+      let nextIndex = index;
+
+      if (event.key === "ArrowRight") nextIndex = (index + 1) % buttons.length;
+      if (event.key === "ArrowLeft") nextIndex = (index - 1 + buttons.length) % buttons.length;
+      if (event.key === "Home") nextIndex = 0;
+      if (event.key === "End") nextIndex = buttons.length - 1;
+      if (nextIndex === index && !["Home", "End"].includes(event.key)) return;
+
+      event.preventDefault();
+      activateTab(buttons[nextIndex], true);
+    });
+  });
+
+  activateTab(buttons.find((button) => button.getAttribute("aria-selected") === "true") || buttons[0]);
+});
+
 const emailForm = document.querySelector("[data-email-form]");
 if (emailForm) {
   const status = emailForm.querySelector("[data-form-status]");

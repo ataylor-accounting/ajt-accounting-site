@@ -174,16 +174,36 @@
               <p class="kicker">Pricing & Plan</p>
               <h2>We Deliver Perfect Pricing and Plan Just For You</h2>
             </div>
-            <ul class="pill-list">
-              <li>Bookkeeping Bundles</li>
-              <li>Taxes</li>
-              <li>Payroll/Accounting Clean-up</li>
-            </ul>
           </div>
-          <div class="grid three" style="margin-top: 28px">
-            <article class="card price-card"><h3>Tier 1</h3><div class="price">$400-$650</div><p>New Contractors/solopreneurs</p><a class="button lime" href="contact/">Get Started</a><ul><li>Simple bookkeeping service</li><li>Annual tax strategy session</li><li>Monthly financial reporting</li><li>Preparation of reports for tax prep</li></ul></article>
-            <article class="card price-card"><h3>Tier 2</h3><div class="price">$800-$1300</div><p>Ideal for small growing teams</p><a class="button lime" href="contact/">Get Started</a><ul><li>Comprehensive bookkeeping</li><li>Payroll for up to 10 people</li><li>Quarterly tax strategy meetings</li><li>Monthly financial reporting</li></ul></article>
-            <article class="card price-card"><h3>Tier 3</h3><div class="price">$1,500+</div><p>Tailored for established businesses</p><a class="button lime" href="contact/">Get Started</a><ul><li>Advanced bookkeeping services</li><li>Payroll for all employees</li><li>Monthly or weekly financial meetings</li><li>CFO services and forecasting</li></ul></article>
+          <div class="pricing-tabs" data-tabs>
+            <div class="tab-list" role="tablist" aria-label="Pricing categories">
+              <button class="tab-button is-active" id="home-bookkeeping-tab" type="button" role="tab" aria-selected="true" aria-controls="home-bookkeeping-panel" data-tab-button>Bookkeeping Bundles</button>
+              <button class="tab-button" id="home-taxes-tab" type="button" role="tab" aria-selected="false" aria-controls="home-taxes-panel" tabindex="-1" data-tab-button>Taxes</button>
+              <button class="tab-button" id="home-payroll-tab" type="button" role="tab" aria-selected="false" aria-controls="home-payroll-panel" tabindex="-1" data-tab-button>Payroll/Accounting Clean-up</button>
+            </div>
+            <div class="tab-panel is-active" id="home-bookkeeping-panel" role="tabpanel" aria-labelledby="home-bookkeeping-tab" data-tab-panel>
+              <div class="grid three">
+                <article class="card price-card"><h3>Tier 1</h3><div class="price">$400-$650</div><p>New Contractors/solopreneurs</p><a class="button lime" href="contact/?service=Bookkeeping">Get Started</a><ul><li>Simple bookkeeping service</li><li>Annual tax strategy session</li><li>Monthly financial reporting</li><li>Preparation of reports for tax prep</li></ul></article>
+                <article class="card price-card"><h3>Tier 2</h3><div class="price">$800-$1300</div><p>Ideal for small growing teams</p><a class="button lime" href="contact/?service=Bookkeeping">Get Started</a><ul><li>Comprehensive bookkeeping</li><li>Payroll for up to 10 people</li><li>Quarterly tax strategy meetings</li><li>Monthly financial reporting</li></ul></article>
+                <article class="card price-card"><h3>Tier 3</h3><div class="price">$1,500+</div><p>Tailored for established businesses</p><a class="button lime" href="contact/?service=Bookkeeping">Get Started</a><ul><li>Advanced bookkeeping services</li><li>Payroll for all employees</li><li>Monthly or weekly financial meetings</li><li>CFO services and forecasting</li></ul></article>
+              </div>
+            </div>
+            <div class="tab-panel" id="home-taxes-panel" role="tabpanel" aria-labelledby="home-taxes-tab" hidden data-tab-panel>
+              <div class="grid three">
+                <article class="card price-card"><h3>Individual 1</h3><div class="price">$125-$150</div><p class="muted">Basic return</p><a class="button lime" href="contact/?service=Taxes">Get Started</a><ul><li>Limited sources of income</li><li>Dependents</li><li>Single state return</li><li>E-filing included</li></ul></article>
+                <article class="card price-card"><h3>Individual 2</h3><div class="price">$175-$225</div><p class="muted">Standard tax return</p><a class="button lime" href="contact/?service=Taxes">Get Started</a><ul><li>Multiple sources of income</li><li>Multi-state return</li><li>Limited self-employment</li><li>Education and retirement reporting</li></ul></article>
+                <article class="card price-card"><h3>Individual 3</h3><div class="price">$250+</div><p class="muted">Advanced tax return</p><a class="button lime" href="contact/?service=Taxes">Get Started</a><ul><li>Self-employed or small business owners</li><li>Rental properties</li><li>Extensive investment reporting</li><li>Tax preparation meeting</li></ul></article>
+                <article class="card price-card"><h3>Business 1</h3><div class="price">$300-$500</div><p class="muted">Basic business return</p><a class="button lime" href="contact/?service=Taxes">Get Started</a><ul><li>Partnership or S-corp filing</li><li>Basic income and expense categorization</li><li>Small, low-volume operations</li><li>E-filing included</li></ul></article>
+                <article class="card price-card"><h3>Business 2</h3><div class="price">$600-$900</div><p class="muted">Standard business return</p><a class="button lime" href="contact/?service=Taxes">Get Started</a><ul><li>Partnership, S-corp, or C-corp filing</li><li>Growing small businesses</li><li>Multi-state filing</li><li>Tax preparation meeting</li></ul></article>
+                <article class="card price-card"><h3>Business 3</h3><div class="price">$1,000+</div><p class="muted">Advanced business return</p><a class="button lime" href="contact/?service=Taxes">Get Started</a><ul><li>Established businesses</li><li>Complex income and expenses</li><li>Fixed asset depreciation schedules</li><li>Quarterly tax meetings</li></ul></article>
+              </div>
+            </div>
+            <div class="tab-panel" id="home-payroll-panel" role="tabpanel" aria-labelledby="home-payroll-tab" hidden data-tab-panel>
+              <div class="grid two">
+                <article class="card price-card"><h3>Accounting Cleanup</h3><p>Cleanup varies by the condition of your records, software used, and business complexity. AJT Accounting starts with a consultation to review current books and create a clear plan to get records back on track.</p><a class="button lime" href="contact/?service=Accounting%20Cleanup">Discuss cleanup</a></article>
+                <article class="card price-card"><h3>Payroll</h3><p>Payroll services ensure employees are paid accurately and on time while keeping your business compliant with required federal and state payroll filings.</p><a class="button lime" href="contact/?service=Payroll">Discuss payroll</a></article>
+              </div>
+            </div>
           </div>
         </div>
       </section>
