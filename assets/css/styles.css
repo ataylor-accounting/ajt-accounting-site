@@ -582,7 +582,8 @@ h3 {
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
 }
 
-.capabilities .card:nth-child(2) {
+.capabilities .card:nth-child(2),
+.capabilities .card:nth-child(4) {
   background: var(--lime);
 }
 
