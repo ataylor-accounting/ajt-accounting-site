@@ -790,13 +790,14 @@ h3 {
   height: 100%;
   min-height: 520px;
   object-fit: cover;
+  filter: brightness(1.22) contrast(1.02);
 }
 
 .contact-spacer::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(5, 5, 5, 0.05), rgba(5, 5, 5, 0.76));
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0), rgba(5, 5, 5, 0.48));
 }
 
 .contact-spacer figcaption {
@@ -805,6 +806,7 @@ h3 {
   right: 28px;
   bottom: 28px;
   z-index: 1;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.62);
 }
 
 .contact-spacer blockquote {
