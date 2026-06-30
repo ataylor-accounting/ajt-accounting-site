@@ -776,10 +776,59 @@ h3 {
 }
 
 .contact-spacer {
-  color: var(--lime-strong);
-  min-height: 420px;
-  display: flex;
-  align-items: end;
+  position: relative;
+  min-height: 520px;
+  margin: 0;
+  overflow: hidden;
+  background: var(--black);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.contact-spacer img {
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  object-fit: cover;
+}
+
+.contact-spacer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.05), rgba(5, 5, 5, 0.76));
+}
+
+.contact-spacer figcaption {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+  z-index: 1;
+}
+
+.contact-spacer blockquote {
+  max-width: 520px;
+  margin: 0 0 18px;
+  font-size: clamp(1.25rem, 2vw, 1.9rem);
+  line-height: 1.25;
+  font-weight: 650;
+}
+
+.contact-spacer strong,
+.contact-spacer span {
+  display: block;
+}
+
+.contact-spacer strong {
+  color: var(--lime);
+  font-weight: 900;
+}
+
+.contact-spacer span {
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 750;
 }
 
 .lead-form,
@@ -956,8 +1005,9 @@ h3 {
     justify-content: flex-start;
   }
 
-  .contact-spacer {
-    display: none;
+  .contact-spacer,
+  .contact-spacer img {
+    min-height: 430px;
   }
 }
 
