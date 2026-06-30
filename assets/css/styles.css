@@ -587,16 +587,33 @@ h3 {
 }
 
 .service-icon {
-  width: 62px;
-  height: 62px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  background: var(--black);
-  color: var(--lime);
-  font-size: 1.7rem;
-  font-weight: 900;
+  width: 65px;
+  height: 65px;
+  display: block;
+}
+
+.service-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.service-icon-lime {
+  --icon-bg: var(--lime);
+  --icon-mark: var(--black);
+}
+
+.service-icon-dark {
+  --icon-bg: var(--black);
+  --icon-mark: var(--lime);
+}
+
+.service-icon-bg {
+  fill: var(--icon-bg);
+}
+
+.service-icon-mark {
+  fill: var(--icon-mark);
 }
 
 .service-card ul {
