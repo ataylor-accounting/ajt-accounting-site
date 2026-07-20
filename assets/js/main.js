@@ -75,6 +75,16 @@ document.querySelectorAll("[data-tabs]").forEach((tabs) => {
 const emailForm = document.querySelector("[data-email-form]");
 if (emailForm) {
   const status = emailForm.querySelector("[data-form-status]");
+  const serviceSelect = emailForm.querySelector("[data-service-select]");
+  const requestedService = new URLSearchParams(window.location.search).get("service");
+
+  if (serviceSelect && requestedService) {
+    const normalizedService = requestedService.toLowerCase().replace(/[-_]+/g, " ").trim();
+    const matchingOption = [...serviceSelect.options].find((option) => option.value.toLowerCase() === normalizedService);
+
+    if (matchingOption) serviceSelect.value = matchingOption.value;
+  }
+
   emailForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const formData = new FormData(emailForm);
