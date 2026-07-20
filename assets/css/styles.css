@@ -772,7 +772,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr minmax(420px, 0.85fr);
   gap: 46px;
-  align-items: center;
+  align-items: stretch;
 }
 
 .contact-spacer {
