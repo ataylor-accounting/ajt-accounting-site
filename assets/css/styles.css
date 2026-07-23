@@ -981,6 +981,11 @@ h3 {
   font-size: clamp(1.8rem, 3vw, 2.7rem);
 }
 
+.contact-page .quick-question h2 {
+  max-width: none;
+  white-space: nowrap;
+}
+
 .site-footer {
   background: var(--paper);
   color: var(--muted);
@@ -1208,6 +1213,10 @@ h3 {
   .lead-form,
   .quick-question {
     padding: 20px;
+  }
+
+  .contact-page .quick-question h2 {
+    white-space: normal;
   }
 
   .actions .button,
