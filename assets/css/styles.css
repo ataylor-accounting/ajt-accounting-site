@@ -771,7 +771,7 @@ h3 {
 .contact-layout {
   display: grid;
   grid-template-columns: 1fr minmax(420px, 0.85fr);
-  gap: 46px;
+  gap: 0;
   align-items: stretch;
 }
 
