@@ -44,9 +44,9 @@ a {
 }
 
 .nav {
-  width: min(1180px, calc(100% - 32px));
+  width: min(1400px, calc(100% - 40px));
   margin: 0 auto;
-  min-height: 84px;
+  min-height: 188px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -62,12 +62,13 @@ a {
 }
 
 .brand img {
-  width: 82px;
-  height: 72px;
+  width: 176px;
+  height: 148px;
   object-fit: contain;
 }
 
 .brand span {
+  display: none;
   max-width: 270px;
   font-size: 0.82rem;
   color: var(--muted);
@@ -82,13 +83,20 @@ a {
   gap: 14px;
 }
 
+.nav-toggle {
+  display: none;
+}
+
 .nav-links a {
-  padding: 10px 13px;
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 20px;
   border-radius: 999px;
   color: var(--muted);
   text-decoration: none;
-  font-size: 0.86rem;
-  font-weight: 750;
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
 .nav-links a:hover,
@@ -102,15 +110,15 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 34px;
+  min-height: 50px;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 900;
 }
 
 .icon-link {
-  min-width: 40px;
-  padding: 0 10px;
+  min-width: 50px;
+  padding: 0 12px;
   background: var(--lime);
   color: var(--black);
   font-size: 0.78rem;
@@ -118,16 +126,16 @@ a {
 }
 
 .icon-link img {
-  width: 17px;
-  height: 17px;
+  width: 20px;
+  height: 20px;
   display: block;
 }
 
 .phone-pill {
-  padding: 0 20px;
+  padding: 0 28px;
   background: var(--black);
   color: var(--lime);
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   letter-spacing: 0;
 }
 
@@ -140,7 +148,7 @@ a {
 }
 
 .wrap {
-  width: min(1180px, calc(100% - 32px));
+  width: min(1270px, calc(100% - 40px));
   margin: 0 auto;
 }
 
@@ -162,8 +170,8 @@ a {
 .hero-copy h1 {
   max-width: 650px;
   margin: 8px 0 18px;
-  font-size: clamp(2.35rem, 3.75vw, 3.9rem);
-  line-height: 1.28;
+  font-size: clamp(2.2rem, 3.1vw, 2.85rem);
+  line-height: 1.35;
   font-weight: 500;
 }
 
@@ -196,7 +204,9 @@ h3 {
 }
 
 h2 {
-  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-size: clamp(1.45rem, 2.25vw, 2rem);
+  line-height: 1.34;
+  font-weight: 500;
 }
 
 h3 {
@@ -214,13 +224,14 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  padding: 0 22px;
+  min-height: 56px;
+  padding: 0 30px;
   border: 1px solid transparent;
   border-radius: 999px;
   background: var(--black);
   color: var(--white);
   text-decoration: none;
+  font-size: 1.08rem;
   font-weight: 900;
   cursor: pointer;
 }
@@ -367,7 +378,7 @@ h3 {
   position: relative;
   overflow: hidden;
   margin: 0;
-  min-height: 310px;
+  min-height: 405px;
   border-radius: 14px;
 }
 
@@ -390,7 +401,7 @@ h3 {
 }
 
 .proof-card {
-  min-height: 310px;
+  min-height: 405px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -471,7 +482,7 @@ h3 {
 }
 
 .badge-track img {
-  max-height: 92px;
+  max-height: 126px;
   width: auto;
   object-fit: contain;
 }
@@ -578,33 +589,45 @@ h3 {
   min-height: 270px;
   display: grid;
   align-content: start;
-  gap: 16px;
+  gap: 22px;
+  padding: 14px 14px 28px;
+  overflow: hidden;
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
 }
 
 .capabilities .card:nth-child(2),
 .capabilities .card:nth-child(4) {
-  background: var(--lime);
+  background: var(--white);
+}
+
+.capabilities .card h3,
+.capabilities .card ul {
+  margin-right: 12px;
+  margin-left: 12px;
 }
 
 .service-icon {
-  width: 65px;
-  height: 65px;
-  display: block;
+  width: 100%;
+  height: 196px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
 }
 
 .service-icon svg {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
 }
 
 .service-icon-lime {
+  background: var(--black);
   --icon-bg: var(--lime);
   --icon-mark: var(--black);
 }
 
 .service-icon-dark {
+  background: var(--lime);
   --icon-bg: var(--black);
   --icon-mark: var(--lime);
 }
@@ -645,7 +668,7 @@ h3 {
 }
 
 .story-grid > article h2 {
-  font-size: clamp(1.8rem, 2.8vw, 3rem);
+  font-size: clamp(1.45rem, 2.25vw, 2rem);
 }
 
 .metric-card {
@@ -786,9 +809,11 @@ h3 {
 }
 
 .contact-spacer img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  min-height: 520px;
+  min-height: 0;
   object-fit: cover;
   filter: brightness(1.22) contrast(1.02);
 }
@@ -838,12 +863,18 @@ h3 {
   background: var(--black);
   color: var(--white);
   border-radius: 0;
-  padding: 34px;
+  padding: 24px 30px;
 }
 
 .lead-form h2,
 .contact-panel h2 {
-  font-size: clamp(1.8rem, 2.6vw, 2.7rem);
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+}
+
+.lead-form > .kicker,
+.lead-form > h2,
+.lead-form > p {
+  display: none;
 }
 
 .lead-form p,
@@ -855,8 +886,8 @@ h3 {
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 20px;
+  gap: 10px 12px;
+  margin-top: 0;
 }
 
 .lead-form label {
@@ -871,12 +902,12 @@ h3 {
 .lead-form select,
 .lead-form textarea {
   width: 100%;
-  min-height: 44px;
+  min-height: 40px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 7px;
   background: var(--field);
   color: var(--white);
-  padding: 10px 12px;
+  padding: 8px 10px;
   font: inherit;
 }
 
@@ -885,7 +916,7 @@ h3 {
 }
 
 .lead-form > label {
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .checkbox {
@@ -900,7 +931,7 @@ h3 {
 }
 
 .lead-form button {
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
 .lead-form small {
@@ -972,6 +1003,7 @@ h3 {
   .nav {
     grid-template-columns: 1fr;
     padding: 14px 0;
+    min-height: auto;
   }
 
   .brand {
@@ -1016,34 +1048,84 @@ h3 {
 @media (max-width: 620px) {
   .nav {
     width: min(100% - 20px, 1180px);
+    grid-template-columns: auto 42px 1fr;
+    align-items: start;
+    column-gap: 20px;
     gap: 10px;
+    padding: 10px 0;
   }
 
   .brand {
+    grid-column: 1;
+    grid-row: 1 / span 2;
     align-items: center;
     justify-content: flex-start;
   }
 
   .brand img {
-    width: 54px;
-    height: 46px;
+    width: 122px;
+    height: 103px;
   }
 
   .brand span {
-    font-size: 0.68rem;
+    display: none;
   }
 
   .nav-links {
+    grid-column: 1 / -1;
+    display: none;
     gap: 6px;
   }
 
+  .nav.is-open .nav-links {
+    display: flex;
+  }
+
+  .nav-toggle {
+    grid-column: 2;
+    grid-row: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-top: 43px;
+    border: 0;
+    border-radius: 3px;
+    background: var(--lime);
+    color: var(--black);
+    cursor: pointer;
+  }
+
+  .nav-toggle span,
+  .nav-toggle::before,
+  .nav-toggle::after {
+    content: "";
+    display: block;
+    width: 21px;
+    height: 3px;
+    border-radius: 999px;
+    background: currentColor;
+  }
+
+  .nav-toggle {
+    flex-direction: column;
+    gap: 4px;
+  }
+
   .nav-links a {
-    padding: 7px 9px;
+    min-height: 36px;
+    padding: 0 10px;
     font-size: 0.76rem;
   }
 
   .nav-actions {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-content: start;
+    justify-content: flex-start;
     gap: 8px;
+    padding-top: 10px;
   }
 
   .tab-list {
@@ -1056,12 +1138,12 @@ h3 {
   }
 
   .original-hero {
-    padding: 46px 0 28px;
+    padding: 58px 0 34px;
   }
 
   .hero-copy h1 {
-    font-size: 2rem;
-    line-height: 1.25;
+    font-size: 1.62rem;
+    line-height: 1.34;
   }
 
   .review-card {
@@ -1075,7 +1157,7 @@ h3 {
   .portrait-card,
   .service-image-card,
   .proof-card {
-    min-height: 280px;
+    min-height: 405px;
   }
 
   .badge-track img {
@@ -1088,7 +1170,7 @@ h3 {
 
   .lead-form,
   .quick-question {
-    padding: 24px;
+    padding: 20px;
   }
 
   .actions .button,

@@ -1,6 +1,24 @@
 const year = document.querySelector("[data-year]");
 if (year) year.textContent = String(new Date().getFullYear());
 
+document.querySelectorAll(".nav").forEach((nav) => {
+  const links = nav.querySelector(".nav-links");
+  if (!links) return;
+
+  const toggle = document.createElement("button");
+  toggle.className = "nav-toggle";
+  toggle.type = "button";
+  toggle.setAttribute("aria-label", "Menu");
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.append(document.createElement("span"));
+  links.before(toggle);
+
+  toggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  });
+});
+
 const reviewCarousel = document.querySelector("[data-review-carousel]");
 if (reviewCarousel) {
   const slides = [...reviewCarousel.querySelectorAll(".review-slide")];
