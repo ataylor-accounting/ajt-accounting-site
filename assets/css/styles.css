@@ -877,6 +877,30 @@ h3 {
   display: none;
 }
 
+.contact-page .contact-layout {
+  grid-template-columns: minmax(480px, 0.95fr) minmax(420px, 1fr);
+  align-items: start;
+}
+
+.contact-page .contact-spacer {
+  min-height: 870px;
+}
+
+.contact-page .contact-spacer img {
+  object-position: 50% 0;
+}
+
+.contact-page .lead-form {
+  margin-top: 74px;
+  padding: 54px 46px 44px;
+}
+
+.contact-page .lead-form > .kicker,
+.contact-page .lead-form > h2,
+.contact-page .lead-form > p {
+  display: block;
+}
+
 .lead-form p,
 .contact-panel .lead,
 .contact-panel .muted {
@@ -1042,6 +1066,19 @@ h3 {
   .contact-spacer,
   .contact-spacer img {
     min-height: 430px;
+  }
+
+  .contact-page .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-page .contact-spacer,
+  .contact-page .contact-spacer img {
+    min-height: 560px;
+  }
+
+  .contact-page .lead-form {
+    margin-top: 0;
   }
 }
 
