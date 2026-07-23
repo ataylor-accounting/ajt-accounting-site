@@ -891,7 +891,7 @@ h3 {
 }
 
 .contact-page .lead-form {
-  margin-top: 74px;
+  min-height: 870px;
   padding: 54px 46px 44px;
 }
 
